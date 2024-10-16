@@ -1,0 +1,27 @@
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Déplace vers le bas */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Retourne à la position d'origine */
+    }
+  }
+  
+  .animate-bottom-to-top {
+    animation: slideIn forwards; /* Animation avec un temps d'exécution variable */
+  }
+  
+  .animate-bottom-to-top-h2 {
+    animation: slideIn 0.6s ease forwards; /* Durée de 0.6 secondes pour <h2> */
+  }
+  
+  .animate-bottom-to-top-p {
+    animation: slideIn 0.8s ease forwards; /* Durée de 0.8 secondes pour <p> */
+  }
+  
+  .animate-bottom-to-top-card {
+    animation: slideIn 1s ease forwards; /* Durée de 1 seconde pour les cartes */
+  }
+  

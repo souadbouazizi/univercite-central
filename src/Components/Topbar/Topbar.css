@@ -1,0 +1,9 @@
+/* Topbar.css */
+a.social-icon svg path {
+    fill: #ffffff;
+    transition: fill 0.3s ease;
+  }
+  
+  a.social-icon:hover svg path {
+    fill: #808080; /* Gray color on hover */
+  }

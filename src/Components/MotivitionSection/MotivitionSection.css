@@ -1,0 +1,159 @@
+@keyframes fadeLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeRight {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-fade-left {
+    animation: fadeLeft 1s ease-in-out forwards;
+  }
+  
+  .animate-fade-right {
+    animation: fadeRight 1s ease-in-out forwards;
+  }
+  
+  @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 5s linear infinite;
+  }
+  
+  .bg-right {
+    background-size: cover;
+    background-position: center right;
+    position: relative;
+  }
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    padding: 16px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: darkred;
+  }
+
+  .circle-animated {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.5); /* Couleur avec transparence */
+    animation: scale 2s infinite; /* Animation infinie */
+  }
+  
+  .circle-1 {
+    width: 100px; /* Taille du premier cercle */
+    height: 100px;
+    transform: translate(-50%, -50%);
+    animation-delay: 0s; /* Démarre immédiatement */
+  }
+  
+  .circle-2 {
+    width: 120px; /* Taille du deuxième cercle */
+    height: 120px;
+    transform: translate(-50%, -50%);
+    animation-delay: 0.5s; /* Démarre avec un léger décalage */
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: translate(-50%, -50%) scale(1); /* Échelle initiale */
+    }
+    25% {
+      transform: translate(-50%, -50%) scale(1.2); /* Échelle agrandie */
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.4); /* Retour à l'échelle initiale */
+    }
+    75% {
+      transform: translate(-50%, -50%) scale(1.6); /* Échelle agrandie */
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.8); /* Retour à l'échelle initiale */
+    }
+  }
+  
+
+/* Styles de base pour l'image et le contenu */
+.section-container {
+  display: flex;
+  flex-direction: row; /* Par défaut, en ligne pour les grands écrans */
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.left-column {
+  width: 50%; /* Contenu occupe 50% de la largeur */
+
+}
+
+.right-column {
+  width: 50%; /* Image occupe 50% de la largeur */
+  position: relative;
+}
+
+.right-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintient la proportion de l'image */
+}
+
+/* Ajustements pour mobile */
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column; /* Colonne pour mobile */
+  }
+
+  .left-column {
+    width: 100%; /* Le contenu prend toute la largeur */
+    text-align: center; /* Centrer le texte pour une meilleure lisibilité sur mobile */
+    padding: 10px; /* Réduit le padding */
+  }
+
+  .right-column {
+    width: 100%; /* L'image prend toute la largeur */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    position: relative; /* Supprime la position absolue */
+  }
+
+  .right-column img {
+    width: 90%; /* L'image s'ajuste à la largeur de l'écran */
+    height: auto; /* Ajuste l'image pour éviter la déformation */
+    margin: auto;
+  }
+
+}
+
